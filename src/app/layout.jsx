@@ -11,8 +11,8 @@ export const poppins = Poppins({
 })
 
 export const metadata = {
-  title: "Adam Aji Langit ~ Web Designer",
-  description: "Adam Aji Langit's personal website",
+  title: "Persembahan Untuk Lab RPL ~ Dari Sadam",
+  description: "Sadam Ali Rafsanjani - Calon Admin RPL",
 };
 
 export default function RootLayout({ children }) {
