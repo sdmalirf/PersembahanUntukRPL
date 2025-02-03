@@ -10,32 +10,33 @@ import Rounded from '../../common/RoundedButton';
 
 export const projects = [
   {
-    title: "Cozy",
-    src: "/images/cozy.png",
+    title: "Project Manager",
+    src: "/images/PM.jpeg",
     color: "#EFE8D3",
-    url: "https://cozy-adam.vercel.app/",
-    date: "14 Oct 2024 - Current"
+    url: "",
+    date: "sekarang di flexoo!"
   },
   {
-    title: "Rental Website",
-    src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhomepage.91364ca3.png&w=1920&q=95",
+    title: "UI/UX",
+    src: "/images/UIUX.png",
     color: "#ff4d33",
-    url: "https://rental-motor-kudus.vercel.app/",
-    date: "25 Apr 2024 - 2 Sep 2024"
+    // url: "https://rental-motor-kudus.vercel.app/",
+    date: "Lumayan lahh!"
   },
   {
-    title: "Health Care",
-    src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FhealthCare.e8ddfd80.png&w=1920&q=95",
+    title: "FrontenEnd",
+    src: "/images/FE.png",
     color: "#21242b",
-    url: "https://health-care-lemon.vercel.app/",
-    date: "7 Sep 2024 - 18 Sep 2024"
+    // url: "https://health-care-lemon.vercel.app/",
+    date: "Masi belajar + suka banget"
   },
   {
-    title: "Jelajah Kalbar",
-    src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FJelajahKalbar.a1621753.png&w=1920&q=95",
+    title: "Backend?",
+    src: "/images/BE.png",
+    
     color: "#ffa500",
-    url: "https://website-kalimantan-barat.vercel.app/",
-    date: "21 Sep 2023 - 21 Nov 2023"
+    // url: "https://website-kalimantan-barat.vercel.app/",
+    date: "Pengen bisa, makannya masuk Lab sini😁"
   },
 ]
 
@@ -94,7 +95,7 @@ export default function Home() {
         }
       </div>
       <Rounded>
-        <p>More work</p>
+        <p>Masuk RPL, Biar Banyak Bisannya🐍</p>
       </Rounded>
       <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
@@ -116,8 +117,8 @@ export default function Home() {
             }
           </div>
         </motion.div>
-        <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
+        {/* <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div> */}
+        {/* <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div> */}
       </>
     </main>
   )

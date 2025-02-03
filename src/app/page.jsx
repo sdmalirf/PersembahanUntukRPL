@@ -11,36 +11,50 @@ import Contact from '../components/Contact';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    (
-      async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default
-        const locomotiveScroll = new LocomotiveScroll();
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 1280); // 1280px adalah batas xl di Tailwind
+    };
 
-        setTimeout(() => {
-          setIsLoading(false);
-          document.body.style.cursor = 'default'
-          window.scrollTo(0, 0);
-        }, 2000)
-      }
-    )()
+    checkScreenSize(); // Cek saat pertama kali render
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
-  if (typeof window !== 'undefined') {
-    console.log("Window Test");
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      new LocomotiveScroll();
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
+
+  if (isSmallScreen) {
+    return (
+      <div className={styles.mobileWarning}>
+        <p>Silakan buka di laptop untuk pengalaman yang lebih baik.</p>
+      </div>
+    );
   }
 
   return (
     <main className={styles.main}>
-      <AnimatePresence mode='wait'>
+      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Landing />
       <Description />
       <Projects />
-      <SlidingImages />
+      {/* <SlidingImages /> */}
       <Contact />
     </main>
-  )
+  );
 }

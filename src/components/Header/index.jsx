@@ -58,14 +58,14 @@ export default function IndexComponent() {
                             <div className={styles.logo}>
                                 <p className={styles.copyright}>©</p>
                                 <div className={styles.name}>
-                                    <p className={styles.codeBy}>Code by</p>
-                                    <p className={styles.adam}>Adam</p>
-                                    <p className={styles.aji}>Aji</p>
+                                    <p className={styles.codeBy}>Calon</p>
+                                    <p className={styles.adam}>Admin RPL</p>
+                                    {/* <p className={styles.aji}>RPL</p> */}
                                 </div>
                             </div>
                         </Magnetic>
                     </a>
-                    <div className={styles.nav}>
+                    {/* <div className={styles.nav}>
                         <Magnetic>
                             <div className={styles.el}>
                                 <a href='/work'>Work</a>
@@ -84,18 +84,18 @@ export default function IndexComponent() {
                                 <div className={`indicator contact-indicator ${styles.indicator}`}></div>
                             </div>
                         </Magnetic>
-                    </div>
-                    <div ref={button} className={styles.headerButtonContainer}>
+                    </div> */}
+                    {/* <div ref={button} className={styles.headerButtonContainer}>
                         <Rounded onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
                             <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
                         </Rounded>
-                    </div>
+                    </div> */}
                 </div>
-                <div ref={button} className={styles.headerButtonContainer}>
+                {/* <div ref={button} className={styles.headerButtonContainer}>
                     <Rounded onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
                         <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
                     </Rounded>
-                </div>
+                </div> */}
                 <AnimatePresence mode="wait">
                     {isActive && <Nav />}
                 </AnimatePresence>

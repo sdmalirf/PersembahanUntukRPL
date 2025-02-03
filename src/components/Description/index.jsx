@@ -5,7 +5,7 @@ import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
 
 export default function IndexComponent() {
-    const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
+    const phrase = "Saya ingin masuk RPL, karena menjadi Software Engineering adalah jalan ninjaku🥷";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
@@ -18,10 +18,10 @@ export default function IndexComponent() {
                     })
                 }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</motion.p>
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Semoga saya diterima di RPL ini, belejar bersama para sepuh dan jalan ninja saya untuk menjadi seorang Fullstack Website + Project Manager bisa tercapai!</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={`${styles.button}`}>
-                        <p>About me</p>
+                        <p>Plis Terima <br/> Aku RPL🥹</p>
                     </Rounded>
                 </div>
             </div>
